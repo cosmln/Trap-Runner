@@ -42,14 +42,14 @@ public class ArrowSpawner : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player")) ;
+        if (other.gameObject.CompareTag("Player"));
         {
             shoot = true;
         }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player")) ;
+        if (other.gameObject.CompareTag("Player"));
         {
             shoot = false;
         }

@@ -17,6 +17,10 @@ public class PlayerController : MonoBehaviour
     public float groundRadius;
     public Transform groundPoint;
 
+    public GameObject spellToRight, spellToLeft;
+    Vector2 spellPos;
+    public float firerate;
+    float nextFire;
     Rigidbody2D rB;
     Animator animation;
 
@@ -32,6 +36,10 @@ public class PlayerController : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         jump= Input.GetAxisRaw("Jump");
+        if(Input.GetButtonDown("Fire1"))
+        {
+            Fire();
+        }
 
     }
     private void FixedUpdate()
@@ -65,4 +73,19 @@ public class PlayerController : MonoBehaviour
             transform.localScale = theScale;
         }
     }
+    void Fire()
+    {
+        spellPos = transform.position;
+        if( facingRight)
+        {
+            spellPos += new Vector2(+0.1f, -0.1f);
+            Instantiate(spellToRight, spellPos, Quaternion.identity);
+        }
+        else
+        {
+            spellPos += new Vector2(-0.1f, -0.1f);
+            Instantiate(spellToLeft, spellPos, Quaternion.identity);
+        }
+    }
 }
+

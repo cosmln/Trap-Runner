@@ -19,4 +19,18 @@ public class ArrowScript : MonoBehaviour
     {
         rb.velocity = dir;
     }
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+           
+            Destroy(this.gameObject);
+        }
+
+        if (other.gameObject.CompareTag("Platform"))
+        {
+
+            Destroy(this.gameObject);
+        }
+    }
 }

@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Stats
 {
-    private int health;
-    public int maxHP=5;
+    private static int health;
+    public static int maxHP=3;
     public int Health
     {
         get

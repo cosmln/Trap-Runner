@@ -5,6 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - Arrow
+  - levelBorder
+  - GM
+  - GameOver
+  - Platform
+  - coin
+  - Ground
+  - Enemy
+  - Bat
+  - spell
+  - hearth
   layers:
   - Default
   - TransparentFX
@@ -15,13 +25,13 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Arrow
+  - door
+  - coins
+  - spell
+  - bat
+  - cyclop
+  - spykes
   - 
   - 
   - 
